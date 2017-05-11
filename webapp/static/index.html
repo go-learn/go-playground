@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Go Playground</title>
+    <title>Go 游乐场</title>
     <link rel="stylesheet" href="/static/playground-full.css">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -63,12 +63,12 @@
   </head>
   <body itemscope itemtype="http://schema.org/CreativeWork">
     <div id="banner">
-      <div id="head" itemprop="name">Go Playground</div>
+      <div id="head" itemprop="name">Go 游乐场</div>
       <div id="controls">
-        <input type="button" value="Run" id="run">
-        <input type="button" value="Format" id="fmt">
+        <input type="button" value="运行" id="run">
+        <input type="button" value="格式化" id="fmt">
         {{if $.Share}}
-        <input type="button" value="Share" id="share">
+        <input type="button" value="分享" id="share">
         <input type="text" id="shareURL">
         <label id="embedLabel">
           <input type="checkbox" id="embed">
@@ -77,7 +77,7 @@
         {{end}}
       </div>
       <div id="aboutControls">
-        <input type="button" value="About" id="aboutButton">
+        <input type="button" value="关于" id="aboutButton">
       </div>
     </div>
     <div id="wrap">
@@ -86,24 +86,27 @@
     <div id="output"></div>
     <img itemprop="image" src="/static/gopher.png" style="display:none">
     <div id="about">
-      <p><b>About this Playground</b></p>
+      <p><b>关于 Go 游乐场</b></p>
+      <!--<p>-->
+        <!--This is a fork of the <a href="https://play.golang.org/">Go-->
+        <!--Playground</a> that communicates with an external compilation service-->
+        <!--that receives a Go program, compiles, links and runs the program inside-->
+        <!--a controlled machine, then returns the output.-->
+      <!--</p>-->
+      <!--<p>-->
+        <!--There are limitations to the programs than can be run in this-->
+        <!--playground, but that really depends on the external compilation-->
+        <!--service. Chances are you're not going to be allowed to write to the-->
+        <!--filesystem or to use the network.-->
+      <!--</p>-->
+      <!--<p>-->
+        <!--You can run an install your own playground that runs under your own-->
+        <!--restrictions, check out the Github's <a-->
+        <!--href="https://github.com/bingohuang/go-playground">bingohuang/go-playground</a>-->
+        <!--repository.-->
+      <!--</p>-->
       <p>
-        This is a fork of the <a href="https://play.golang.org/">Go
-        Playground</a> that communicates with an external compilation service
-        that receives a Go program, compiles, links and runs the program inside
-        a controlled machine, then returns the output.
-      </p>
-      <p>
-        There are limitations to the programs than can be run in this
-        playground, but that really depends on the external compilation
-        service. Chances are you're not going to be allowed to write to the
-        filesystem or to use the network.
-      </p>
-      <p>
-        You can run an install your own playground that runs under your own
-        restrictions, check out the Github's <a
-        href="https://github.com/xiam/go-playground">xiam/go-playground</a>
-        repository.
+        欢迎联系 <a href="mailto:me@bingohuang.com">me@bingohuang.com</a>
       </p>
     </div>
 

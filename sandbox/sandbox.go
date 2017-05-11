@@ -42,6 +42,7 @@ func main() {
 		test()
 		return
 	}
+	log.Println("Go Playground Sandbox Start!")
 	http.HandleFunc("/compile", compileHandler)
 	http.HandleFunc("/_ah/health", healthHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
@@ -50,6 +51,9 @@ func main() {
 func compileHandler(w http.ResponseWriter, r *http.Request) {
 	var req Request
 	version := r.PostFormValue("version")
+	log.Printf("request version: %v \n", version)
+	body := r.PostFormValue("body")
+	log.Printf("request body: %v \n", body)
 	if version == "2" {
 		req.Body = r.PostFormValue("body")
 	} else {
@@ -152,6 +156,7 @@ func healthHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Health check failed: "+err.Error(), http.StatusInternalServerError)
 		return
 	}
+	fmt.Println("I'm OK")
 	fmt.Fprint(w, "ok")
 }
 

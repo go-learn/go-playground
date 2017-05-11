@@ -11,10 +11,16 @@ import (
 
 func init() {
 	http.HandleFunc("/example", exampleHandler)
+	http.HandleFunc("/example2", exampleHandler)
 }
 
 var exampleTemplate = template.Must(template.ParseFiles("static/example.html"))
+var exampleTemplate2 = template.Must(template.ParseFiles("_examples/index.html"))
 
 func exampleHandler(w http.ResponseWriter, r *http.Request) {
 	exampleTemplate.Execute(w, nil)
+}
+
+func exampleHandler2(w http.ResponseWriter, r *http.Request) {
+	exampleTemplate2.Execute(w, nil)
 }

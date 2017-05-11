@@ -17,7 +17,7 @@ import (
 )
 
 var (
-	flagCompileURL   = flag.String("s", "https://play.golang.org/compile?output=json", "Sandbox service URL.")
+	flagCompileURL   = flag.String("s", "http://59.111.95.8:8080/compile?output=json", "Sandbox service URL.")
 	flagDisableCache = flag.Bool("disable-cache", false, "Disable cache.")
 )
 

@@ -5,3 +5,5 @@ playground-full.*
 webapp/vendor
 webapp/webapp
 webapp/app_linux_amd64
+
+.idea
