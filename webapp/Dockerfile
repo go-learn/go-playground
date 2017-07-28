@@ -11,6 +11,8 @@ RUN mkdir /var/data -p
 
 COPY static /var/app/static
 
+COPY _examples /var/app/_examples
+
 WORKDIR /var/app
 
 ENTRYPOINT [ "/bin/app" ]
